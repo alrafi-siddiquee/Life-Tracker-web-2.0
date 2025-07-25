@@ -31,7 +31,7 @@
     color: var(--dark);
     margin: 0;
   }
-  h1, h2, h3 {
+  h1,h2,h3 {
     font-weight: 600;
     color: var(--secondary);
     margin-bottom: 0.6rem;
@@ -54,11 +54,7 @@
     top: 18px;
     animation: beat 1s infinite alternate;
   }
-  @keyframes beat {
-    to {
-      transform: scale(1.15);
-    }
-  }
+  @keyframes beat { to { transform: scale(1.15); } }
   .subtitle {
     color: var(--accent);
     margin-top: 0.3rem;
@@ -75,7 +71,7 @@
   .container {
     max-width: 700px;
     margin: 2.4rem auto;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255,255,255,0.96);
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 18px #afbdd580;
@@ -90,10 +86,7 @@
     color: var(--secondary);
     user-select: none;
   }
-  input[type="text"],
-  input[type="date"],
-  input[type="number"],
-  input[type="time"] {
+  input[type="text"], input[type="date"], input[type="number"], input[type="time"] {
     width: 100%;
     padding: 0.6rem;
     border: 1px solid #b1b1b1;
@@ -102,17 +95,13 @@
     background: var(--light);
     transition: border-color 0.2s;
   }
-  input[type="text"]:focus,
-  input[type="date"]:focus,
-  input[type="number"]:focus,
-  input[type="time"]:focus {
+  input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, input[type="time"]:focus {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 5px var(--accent);
     background: #fff;
   }
-  button,
-  .nav-button {
+  button, .nav-button {
     background: var(--primary);
     color: #fff;
     font-weight: 600;
@@ -124,18 +113,13 @@
     transition: background 0.2s, color 0.2s;
     user-select: none;
   }
-  button:hover,
-  .nav-button:hover {
-    background: var(--secondary);
-  }
+  button:hover, .nav-button:hover { background: var(--secondary); }
   .nav-buttons {
     text-align: center;
     margin-bottom: 1.3rem;
     user-select: none;
   }
-  .nav-button {
-    display: inline-block;
-  }
+  .nav-button { display: inline-block; }
   #reset-btn {
     background: var(--danger);
     color: white;
@@ -147,9 +131,7 @@
     transition: background 0.3s;
     user-select: none;
   }
-  #reset-btn:hover {
-    background: #a72f33;
-  }
+  #reset-btn:hover { background: #a72f33; }
   .dashboard-section {
     display: none;
   }
@@ -174,14 +156,7 @@
     min-width: 100%;
     animation: marquee 34s linear infinite;
   }
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-80%);
-    }
-  }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-80%); } }
   .visual-countdown {
     display: flex;
     justify-content: center;
@@ -411,6 +386,46 @@
     user-select: none;
   }
 
+  /* Money Management Styles */
+  #money-management label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    user-select: none;
+  }
+  #money-management input[type=number], #money-management input[type=date] {
+    border: 1px solid #b1b1b1;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    width: auto;
+  }
+  #money-management button {
+    margin-left: 0.6rem;
+  }
+  #money-management table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+  }
+  #money-management table th, #money-management table td {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #ddd;
+  }
+  #money-management table th {
+    background: #f8f9fa;
+    text-align: left;
+  }
+  #money-management table tfoot th {
+    background: #e2faee;
+  }
+  #money-management table tfoot th:last-child {
+    text-align: right;
+  }
+  #money-management #reset-money-month {
+    margin-top: 0.6rem;
+  }
+
   footer {
     margin-top: 3.2rem;
     padding: 2rem 0 1.1rem;
@@ -500,9 +515,10 @@
     <div class="quote-marquee" aria-live="polite">
       <div class="marquee-content" aria-hidden="true">
         “Indeed, with hardship comes ease.” — Quran 94:6 •
-        “The best time to plant a tree was 20 years ago. The second best time is now.” — Chinese Proverb •
+        "You're the pilot of your time plane" – fly wisely •
+        "Take advantage of five before five..." – Youth, Health, Wealth, Free Time, Life " --Hadith •
         “Life is what happens when you're busy making other plans.” — John Lennon •
-        “Whoever does righteousness … We will surely cause him to live a good life.” — Quran 16:97 •
+        “Whoever does righteousness , We will surely cause him to live a good life.” — Quran 16:97 •
         “The way to get started is to quit talking and begin doing.” — Walt Disney •
         “And We will surely test you … but give good tidings to the patient.” — Quran 2:155
       </div>
@@ -513,6 +529,7 @@
       <button class="nav-button" data-section="daily-tracker" aria-controls="daily-tracker" aria-selected="false" role="tab" tabindex="-1" type="button">Daily Tracker</button>
       <button class="nav-button" data-section="life-goals" aria-controls="life-goals" aria-selected="false" role="tab" tabindex="-1" type="button">Life Goals</button>
       <button class="nav-button" data-section="pomodoro" aria-controls="pomodoro" aria-selected="false" role="tab" tabindex="-1" type="button">Pomodoro Timer</button>
+      <button class="nav-button" data-section="money-management" aria-controls="money-management" aria-selected="false" role="tab" tabindex="-1" type="button">Money Management</button>
       <button id="reset-btn" type="button" aria-label="Reset all saved data">Reset All Data</button>
     </nav>
 
@@ -653,6 +670,48 @@
       </div>
     </section>
 
+    <!-- Money Management Section -->
+    <section id="money-management" class="dashboard-section" role="tabpanel" tabindex="0" hidden>
+      <h2>Money Management</h2>
+      <div style="margin-bottom:1.2rem;">
+        <label for="money-start">Monthly Starting Balance:</label>
+        <input type="number" id="money-start" min="0" placeholder="e.g. 10000" style="width:120px;margin-right:1rem;">
+        <button id="set-money-start">Set / Change Start Balance</button>
+        <span id="money-start-info" style="margin-left:1.2rem;color:#158665;"></span>
+      </div>
+      <div style="margin-bottom:1.2rem;">
+        <label for="money-date">Date:</label>
+        <input type="date" id="money-date" style="width:140px;margin-right:1rem;">
+        <label for="money-spent">Spent Today:</label>
+        <input type="number" id="money-spent" min="0" placeholder="Amount" style="width:90px;margin-right:0.8rem;">
+        <button id="add-money-entry">Add</button>
+      </div>
+
+      <div>
+        <h3 style="margin-top:1.1rem;">Your Money This Month</h3>
+        <table style="width:100%;max-width:600px;margin-bottom:1.3rem; border-collapse: collapse;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;border:1px solid #ddd;padding:6px;">Date</th>
+              <th style="text-align:right;border:1px solid #ddd;padding:6px;">Spent</th>
+            </tr>
+          </thead>
+          <tbody id="money-entries"></tbody>
+          <tfoot>
+            <tr style="background:#e2faee;">
+              <th style="text-align:left;border:1px solid #ddd;padding:6px;">Total Spent</th>
+              <th id="money-total-spent" style="text-align:right;border:1px solid #ddd;padding:6px;"></th>
+            </tr>
+            <tr style="background:#e2faee;">
+              <th style="text-align:left;border:1px solid #ddd;padding:6px;">Money Left</th>
+              <th id="money-total-left" style="text-align:right;border:1px solid #ddd;padding:6px;"></th>
+            </tr>
+          </tfoot>
+        </table>
+        <button id="reset-money-month" style="background:#d64045;">Reset Month</button>
+      </div>
+    </section>
+
   </section>
 </main>
 
@@ -668,10 +727,10 @@
       goals: "lt_goals",
       day: "lt_day",
       pomodoro: "lt_pomodoro",
+      money: "lt_money_management",
     };
 
-    const save = (key, value) =>
-      localStorage.setItem(key, JSON.stringify(value));
+    const save = (key, value) => localStorage.setItem(key, JSON.stringify(value));
     const load = (key) => {
       const v = localStorage.getItem(key);
       return v ? JSON.parse(v) : null;
@@ -741,10 +800,14 @@
     navButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         activateSection(btn.dataset.section, btn);
+        // Special: render money management if this tab selected
+        if (btn.dataset.section === "money-management") {
+          renderMoneyManagement();
+        }
       });
     });
 
-    // Life Progress Countdown
+    // LIFE PROGRESS
     let lifeInterval = null;
     function startLifeStats(user) {
       const dobDate = new Date(user.dob);
@@ -807,7 +870,7 @@
       }, 1000);
     }
 
-    // Daily Tracker Calculate Button
+    // DAILY TRACKER
     const calculateDayBtn = document.getElementById('calculate-day-btn');
     if (calculateDayBtn) {
       calculateDayBtn.addEventListener('click', () => {
@@ -831,15 +894,15 @@
         sleepDate.setHours(sleepHour, sleepMin, 0, 0);
         if (sleepDate <= wakeUpDate) sleepDate.setDate(sleepDate.getDate() + 1);
 
-        const sleepDurationMS = wakeUpDate.getTime() - sleepDate.getTime() + 24*60*60*1000;
+        const sleepDurationMS = wakeUpDate.getTime() - sleepDate.getTime() + 86400000;
         const sleepDurationHours = +(sleepDurationMS / (1000 * 60 * 60)).toFixed(1);
 
         let productiveMS = sleepDate.getTime() - now.getTime();
-        if (productiveMS < 0) productiveMS += 24*60*60*1000;
+        if (productiveMS < 0) productiveMS += 86400000;
         const productiveHours = +(productiveMS / (1000 * 60 * 60)).toFixed(1);
 
         let passedMS = now.getTime() - wakeUpDate.getTime();
-        if (passedMS < 0) passedMS += 24*60*60*1000;
+        if (passedMS < 0) passedMS += 86400000;
         const passedHours = +(passedMS / (1000 * 60 * 60)).toFixed(1);
 
         const totalHours = sleepDurationHours + productiveHours + passedHours;
@@ -860,7 +923,6 @@
         document.getElementById('day-countdown').textContent =
           `You have ${hoursLeft} hours, ${minutesLeft} minutes, and ${secondsLeft} seconds left in your day. Use them wisely!`;
       });
-
       // Load saved wake/sleep times
       const savedDay = load(LS_KEYS.day);
       if (savedDay) {
@@ -869,7 +931,7 @@
       }
     }
 
-    // Life Goals
+    // LIFE GOALS
     const goalsList = document.getElementById('goals-list');
     function loadGoals() {
       return load(LS_KEYS.goals) || [];
@@ -929,7 +991,7 @@
     });
     renderGoals(loadGoals());
 
-    // Pomodoro Timer
+    // POMODORO
     const pomodoroTimer = document.getElementById('pomodoro-timer');
     const startWorkBtn = document.getElementById('start-pomodoro-btn');
     const startBreakBtn = document.getElementById('start-break-btn');
@@ -937,7 +999,7 @@
     const pomodoroCyclesNode = document.getElementById('pomodoro-cycles');
 
     let timerInterval = null;
-    let timeLeft = 25 * 60; // seconds
+    let timeLeft = 25 * 60;
     let isRunning = false;
     let isBreak = false;
     let cycles = 0;
@@ -1012,6 +1074,92 @@
 
     loadPomodoro();
 
+    // MONEY MANAGEMENT
+    const MONEY_KEY = LS_KEYS.money;
+    function getMoneyData() {
+      const d = load(MONEY_KEY);
+      const now = new Date();
+      const ym = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+      if (!d || d.month !== ym) return { month: ym, start: 0, entries: [] };
+      return d;
+    }
+    function saveMoneyData(data) {
+      save(MONEY_KEY, data);
+    }
+    function renderMoneyManagement() {
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0, 10);
+      const data = getMoneyData();
+
+      document.getElementById('money-start').value = data.start ? data.start : '';
+      document.getElementById('money-date').value = todayStr;
+      document.getElementById('money-start-info').textContent =
+        data.start ? `Current Start: ${data.start}` : '';
+
+      let tbody = '';
+      let totalSpent = 0;
+      data.entries.forEach(e => {
+        tbody += `<tr><td>${e.date}</td><td style="text-align:right;">${e.spent}</td></tr>`;
+        totalSpent += Number(e.spent || 0);
+      });
+      document.getElementById('money-entries').innerHTML = tbody;
+      document.getElementById('money-total-spent').textContent = totalSpent;
+      document.getElementById('money-total-left').textContent = data.start ? (data.start - totalSpent) : '';
+
+      document.getElementById('reset-money-month').disabled = !data.start && !data.entries.length;
+    }
+
+    document.getElementById('set-money-start').onclick = function() {
+      let val = parseFloat(document.getElementById('money-start').value || '0');
+      if (isNaN(val) || val <= 0) {
+        alert('Enter a positive number for the start balance.');
+        return;
+      }
+      let data = getMoneyData();
+      data.start = val;
+      data.entries = [];
+      saveMoneyData(data);
+      renderMoneyManagement();
+    };
+
+    document.getElementById('add-money-entry').onclick = function() {
+      let date = document.getElementById('money-date').value;
+      let s = parseFloat(document.getElementById('money-spent').value || '0');
+      if (!date || isNaN(s) || s < 0) {
+        alert('Enter a valid date and amount spent.');
+        return;
+      }
+      let data = getMoneyData();
+      let existing = data.entries.find(e => e.date === date);
+      if (existing) {
+        existing.spent += s;
+      } else {
+        data.entries.push({ date: date, spent: s });
+        data.entries.sort((a, b) => a.date.localeCompare(b.date));
+      }
+      saveMoneyData(data);
+      document.getElementById('money-spent').value = '';
+      renderMoneyManagement();
+    };
+
+    document.getElementById('reset-money-month').onclick = function() {
+      if (confirm("Reset this month's records? This cannot be undone.")) {
+        let now = new Date();
+        let ym = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+        saveMoneyData({ month: ym, start: 0, entries: [] });
+        renderMoneyManagement();
+      }
+    };
+
+    // Render money management when tab is shown
+    const moneyTabBtn = document.querySelector('.nav-button[data-section="money-management"]');
+    if (moneyTabBtn) {
+      moneyTabBtn.addEventListener('click', renderMoneyManagement);
+    }
+    if (document.getElementById("money-management").classList.contains("active")) {
+      renderMoneyManagement();
+    }
+
     // Reset All Data button
     resetBtn.addEventListener("click", () => {
       if (confirm("Are you sure you want to reset all your data? This action cannot be undone.")) {
@@ -1019,11 +1167,12 @@
         localStorage.removeItem(LS_KEYS.goals);
         localStorage.removeItem(LS_KEYS.day);
         localStorage.removeItem(LS_KEYS.pomodoro);
+        localStorage.removeItem(LS_KEYS.money);
         location.reload();
       }
     });
 
-    // Initialize app & UI
+    // Initialize app
     function initializeApp() {
       const user = load(LS_KEYS.user);
       if (user) {
@@ -1038,7 +1187,7 @@
     }
     initializeApp();
 
-    // Submit handler - start tracking
+    // Form submit handler
     form.addEventListener('submit', e => {
       e.preventDefault();
       const name = document.getElementById('full-name').value.trim();
@@ -1055,7 +1204,6 @@
       startLifeStats({ name, dob, lifeExp });
       activateSection("life-progress", navButtons[0]);
     });
-
   });
 </script>
 </body>
